@@ -13,7 +13,7 @@ const MyBlogs = () => {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/blog/get-blog`,
+        `https://blog-app-mx48.onrender.com/api/v1/blog/get-blog`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
