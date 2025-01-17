@@ -12,7 +12,7 @@ const BlogDetails = () => {
   const fetchBlogDetails = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/blog/getsingleblog/${id}`
+        `https://blog-app-mx48.onrender.com/api/v1/blog/getsingleblog/${id}`
       );
       setBlog(data.blog);
       // console.log(data);
