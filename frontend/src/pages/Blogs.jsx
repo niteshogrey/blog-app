@@ -17,7 +17,7 @@ const Blogs = () => {
   const handleFetchBlogs = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/v1/blog/all-blogs"
+        "https://blog-app-mx48.onrender.com/api/v1/blog/all-blogs"
       );
       setAllBlogs(data.blogs);
     } catch (error) {
