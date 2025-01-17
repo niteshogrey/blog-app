@@ -35,7 +35,7 @@ const CreateBlog = () => {
       formData.append("image", image);
 
       const token = localStorage.getItem("token");
-      const { data } = await axios.post("https://blog-app-mx48.onrender.com/api/v1/blog/create-blog", formData, {
+      const { data } = await axios.post("http://localhost:3000/api/v1/blog/create-blog", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`
