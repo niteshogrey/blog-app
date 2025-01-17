@@ -18,7 +18,7 @@ const UpdateBlog = () => {
   const fetchBlogDetails = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/blog/getsingleblog/${id}`
+        `https://blog-app-mx48.onrender.com/api/v1/blog/getsingleblog/${id}`
       );
       if (data?.success) {
         setInput({
@@ -59,7 +59,7 @@ const UpdateBlog = () => {
   
       const token = localStorage.getItem("token");
       const { data } = await axios.put(
-        `http://localhost:3000/api/v1/blog/update-blog/${id}`,
+        `https://blog-app-mx48.onrender.com/api/v1/blog/update-blog/${id}`,
         formData,
         {
           headers: {
@@ -84,7 +84,7 @@ const UpdateBlog = () => {
     try {
         const token = localStorage.getItem("token");
         const { data } = await axios.delete(
-          `http://localhost:3000/api/v1/blog/delete-blog/${id}`,
+          `https://blog-app-mx48.onrender.com/api/v1/blog/delete-blog/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
