@@ -19,7 +19,7 @@ const Register = () => {
           // Handle form submission logic here
           // console.log("Form Data Submitted:", formData);
           try {
-            const { data } = await axios.post('http://localhost:3000/api/v1/user/register', {
+            const { data } = await axios.post('https://blog-app-mx48.onrender.com/api/v1/user/register', {
                 username: formData.username,
                 phone: formData.phone,
                 password: formData.password,
