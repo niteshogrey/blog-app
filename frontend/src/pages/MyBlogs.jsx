@@ -3,6 +3,7 @@ import { MdOutlineEdit } from "react-icons/md";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { addElipsis } from "../utils/commonUtils";
+import { mainApi } from "../features/Apihendler";
 
 const MyBlogs = () => {
   const [userBlogs, setUserBlogs] = useState([]);
@@ -13,7 +14,7 @@ const MyBlogs = () => {
       const token = localStorage.getItem("token");
 
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/blog/get-blog`,
+        `${mainApi}/api/v1/blog/get-blog`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

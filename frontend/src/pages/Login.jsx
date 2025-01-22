@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { authActions } from "../features/auth/auth";
 
 import axios from "axios";
+import { mainApi } from "../features/Apihendler";
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -24,7 +25,7 @@ const Login = () => {
     // console.log("Form Data Submitted:", formData);
     try {
       const { data } = await axios.post(
-        "http://localhost:3000/api/v1/user/login",
+        `${mainApi}/api/v1/user/login`,
         {
           phone: formData.phone,
           password: formData.password,

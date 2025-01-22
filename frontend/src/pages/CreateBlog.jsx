@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { mainApi } from "../features/Apihendler";
 
 const CreateBlog = () => {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ const CreateBlog = () => {
       formData.append("image", image);
 
       const token = localStorage.getItem("token");
-      const { data } = await axios.post("http://localhost:3000/api/v1/blog/create-blog", formData, {
+      const { data } = await axios.post(`${mainApi}/api/v1/blog/create-blog`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`

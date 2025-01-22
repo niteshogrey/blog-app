@@ -3,6 +3,7 @@ import { IoPersonCircle } from "react-icons/io5";
 import moment from 'moment'
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { mainApi } from "../features/Apihendler";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -12,8 +13,9 @@ const BlogDetails = () => {
   const fetchBlogDetails = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/blog/getsingleblog/${id}`
+        `${mainApi}/api/v1/blog/getsingleblog/${id}`
       );
+      
       setBlog(data.blog);
       // console.log(data);
     } catch (error) {

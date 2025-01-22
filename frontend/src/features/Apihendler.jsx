@@ -1,0 +1,1 @@
+export const  mainApi = 'https://blog-app-mx48.onrender.com'

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { mainApi } from "../features/Apihendler";
 
 const UpdateBlog = () => {
   const { id } = useParams(); // Get blog ID from route parameters
@@ -18,7 +19,7 @@ const UpdateBlog = () => {
   const fetchBlogDetails = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:3000/api/v1/blog/getsingleblog/${id}`
+        `${mainApi}api/v1/blog/getsingleblog/${id}`
       );
       if (data?.success) {
         setInput({
@@ -59,7 +60,7 @@ const UpdateBlog = () => {
   
       const token = localStorage.getItem("token");
       const { data } = await axios.put(
-        `http://localhost:3000/api/v1/blog/update-blog/${id}`,
+        `${mainApi}/api/v1/blog/update-blog/${id}`,
         formData,
         {
           headers: {
@@ -84,7 +85,7 @@ const UpdateBlog = () => {
     try {
         const token = localStorage.getItem("token");
         const { data } = await axios.delete(
-          `http://localhost:3000/api/v1/blog/delete-blog/${id}`,
+          `${mainApi}/api/v1/blog/delete-blog/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

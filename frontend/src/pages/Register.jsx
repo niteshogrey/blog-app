@@ -1,6 +1,7 @@
 import  { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
+import { mainApi } from "../features/Apihendler";
 
 const Register = () => {
       const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Register = () => {
           // Handle form submission logic here
           // console.log("Form Data Submitted:", formData);
           try {
-            const { data } = await axios.post('http://localhost:3000/api/v1/user/register', {
+            const { data } = await axios.post(`${mainApi}/api/v1/user/register`, {
                 username: formData.username,
                 phone: formData.phone,
                 password: formData.password,

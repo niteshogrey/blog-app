@@ -4,6 +4,7 @@ import { MdOutlineEdit } from "react-icons/md";
 import { IoPersonCircle } from "react-icons/io5";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { mainApi } from "../features/Apihendler";
 // import { useDispatch, useSelector } from "react-redux";
 // import { fetchBlogSuccess } from "../features/blog/blogSlice";
   const useAuth =()=>{
@@ -17,7 +18,7 @@ const Blogs = () => {
   const handleFetchBlogs = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/v1/blog/all-blogs"
+        `${mainApi}/api/v1/blog/all-blogs`
       );
       setAllBlogs(data.blogs);
     } catch (error) {
