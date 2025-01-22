@@ -17,7 +17,7 @@ const app = express()
 
 //middlewares
 app.use(cors({
-    origin: 'https://blog-app-1-je7l.onrender.com'
+    origin: 'https://blog-app-mx48.onrender.com'
 }));
 app.use(express.json());
 
