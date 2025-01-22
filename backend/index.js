@@ -17,7 +17,7 @@ const app = express()
 
 //middlewares
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://blog-app-1-je7l.onrender.com/'
 }));
 app.use(express.json());
 
