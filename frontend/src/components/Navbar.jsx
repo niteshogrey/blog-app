@@ -131,13 +131,13 @@ const Navbar = () => {
                 ) : (
                   <>
                     <a
-                      href="/login"
+                      onClick={()=>navigate('/login')}
                       className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Login
                     </a>
                     <a
-                      href="/register"
+                      onClick={()=>navigate('/register')}
                       className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       Register
@@ -185,13 +185,13 @@ const Navbar = () => {
             ) : (
               <>
                 <a
-                  href="/login"
+                  onClick={()=>navigate('/login')}
                   className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Login
                 </a>
                 <a
-                  href="/register"
+                  onClick={()=>navigate('/register')}
                   className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Register
