@@ -19,7 +19,7 @@ const Navbar = () => {
       const fetchUsername = async () => {
         try {
           const { data } = await axios.get(
-            `https://blog-app-mx48.onrender.com/api/v1/user/user/${userId}`
+            `https://blog-app-1dc8.onrender.com/api/v1/user/user/${userId}`
           );
           setUsername(data.user?.username);
           // console.log(data.user?.username);
