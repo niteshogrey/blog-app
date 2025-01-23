@@ -16,9 +16,7 @@ connectCloudinary()
 const app = express()
 
 //middlewares
-app.use(cors({
-    origin: 'https://blog-app-mx48.onrender.com'
-}));
+app.use(cors());
 app.use(express.json());
 
 //routes
