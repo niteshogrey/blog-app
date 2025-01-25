@@ -48,7 +48,7 @@ const BlogDetails = () => {
             </div>
             <div className="md:ml-10">
               <h1 className="text-3xl font-bold mb-5 capitalize">
-                Title: Title: {blog.title}
+                Title: {blog.title}
               </h1>
               <p className="text-lg text-gray-600">
                 Description: {blog.description}
