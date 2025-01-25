@@ -103,7 +103,7 @@ const Navbar = () => {
                       Home
                     </a>
                     <a
-                      href="/createblog"
+                      //href="/createblog"
                       onClick={()=>navigate('/createblog')}
                       className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
@@ -111,7 +111,7 @@ const Navbar = () => {
                     </a>
                     <a
                       onClick={()=>navigate('/myblogs')}
-                      href="/myblogs"
+                      //href="/myblogs"
                       className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
                       My Blog
@@ -133,7 +133,7 @@ const Navbar = () => {
                 ) : (
                   <>
                     <a
-                      href = '/login'
+                      //href = '/login'
                       onClick={()=>navigate('/login')}
                       className="text-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     >
@@ -173,7 +173,7 @@ const Navbar = () => {
                 </a>
                 <a
                   onClick={()=>navigate('/myblogs')}
-                  href="/myblogs"
+                  //href="/myblogs"
                   className="text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   My Blog
