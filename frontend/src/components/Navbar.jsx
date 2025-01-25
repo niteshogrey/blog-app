@@ -166,7 +166,7 @@ const Navbar = () => {
                 </a>
                 <a
                   onClick={()=>navigate('/createblog')}
-                  href="/createblog"
+                  //href="/createblog"
                   className="text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   Create Blog
